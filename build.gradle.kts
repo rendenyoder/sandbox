@@ -1,18 +1,14 @@
 plugins {
-    kotlin("jvm") version "2.0.20"
+    alias(libs.plugins.kotlin.jvm) apply false
 }
 
-group = "org.leetcode"
-version = "1.0-SNAPSHOT"
-
-repositories {
-    mavenCentral()
+allprojects {
+    repositories {
+        mavenCentral()
+    }
 }
 
-dependencies {
-    testImplementation(kotlin("test"))
-}
-
-tasks.test {
-    useJUnitPlatform()
+subprojects {
+    group = "io.sandbox"
+    version = "1.0-SNAPSHOT"
 }
