@@ -1,3 +1,3 @@
 rootProject.name = "sandbox"
 
-include("leetcode")
+include("leetcode", "patterns")
